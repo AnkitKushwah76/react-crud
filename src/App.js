@@ -4,13 +4,16 @@ import "./Condition.js";
 import Condition from "./Condition.js";
 import Hook from "./Hook.js";
 import RefHook from "./RefHook.js";
-
+import ChildA from "./ChildA.js";
 function App() {
+  const name = "Code with React.js";
   return (
     <>
       {/* <Condition/> */}
       {/* <Hook/> */}
-      <RefHook />
+      <h1> Props Drilling</h1>
+      <ChildA name = {name}/>
+      {/* <RefHook /> */}
     </>
   );
 }
