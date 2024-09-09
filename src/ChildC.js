@@ -1,10 +1,22 @@
 import React from "react";
-const ChildC = ({ name }) => {
+import { fName } from "./App";
+// const ChildC = ({ name }) => {
+//   return (
+//     <>
+//       <h1> Child C data : {name}</h1>
+//     </>
+//   );
+// };
+
+const ChildC = () => {
   return (
     <>
-      <h1> Child C data : {name}</h1>
+      <fName.Consumer>
+        {(fName) => {
+          return <h1> My name is {fName}</h1>;
+        }}
+      </fName.Consumer>
     </>
   );
 };
-
 export default ChildC;
