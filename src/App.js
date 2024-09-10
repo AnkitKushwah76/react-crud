@@ -7,6 +7,11 @@ import RefHook from "./RefHook.js";
 import ChildA from "./ChildA.js";
 import { createContext } from "react";
 import Memo from "./Memo.js";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Home from "./Home.js";
+import About from "./About.js";
 const fName = createContext();
 function App() {
   // const name = "Code with React.js";
@@ -22,6 +27,13 @@ function App() {
       </fName.Provider> */}
 
       <Memo />
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
