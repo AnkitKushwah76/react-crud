@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { fName } from "./App";
 // const ChildC = ({ name }) => {
 //   return (
@@ -8,14 +8,23 @@ import { fName } from "./App";
 //   );
 // };
 
+// const ChildC = () => {
+//   return (
+//     <>
+//       <fName.Consumer>
+//         {(fName) => {
+//           return <h1> My name is {fName}</h1>;
+//         }}
+//       </fName.Consumer>
+//     </>
+//   );
+// };
+
 const ChildC = () => {
+  const name = useContext(fName);
   return (
     <>
-      <fName.Consumer>
-        {(fName) => {
-          return <h1> My name is {fName}</h1>;
-        }}
-      </fName.Consumer>
+      <h1> My Name is {name}</h1>
     </>
   );
 };
