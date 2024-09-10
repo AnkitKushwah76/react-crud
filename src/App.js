@@ -12,6 +12,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./Home.js";
 import About from "./About.js";
+import Contact from "./Contact.js";
+import Youtube from "./Youtube.js";
+import Github from "./Github.js";
 const fName = createContext();
 function App() {
   // const name = "Code with React.js";
@@ -32,6 +35,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact/" element={<Contact />}>
+            <Route path="youtube" element={<Youtube />} />
+            <Route path="github" element={<Github />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
